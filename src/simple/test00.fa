@@ -1,0 +1,41 @@
+/*====================================================================================
+  File:       test1
+  Board:      Digilent Nexys A7
+  Designer:   Victor Yurkovsky  
+  Date:       Jul 19 2021
+
+  A very simple test.  Connect SW0 to LED0
+====================================================================================*/
+//#include "xc3s200ft256.xdlrc"
+
+/*===================================================================================
+ InSimple
+====================================================================================*/
+InSimple (loc,std:LVTTL) output:(OUT)  {
+    iobIn IOB loc:!loc! cfg:{IDELMUX:1 IOATTRBOX:!std! IMUX:1}  ;
+    wire iobIn's I to my OUT  ;
+}
+
+/*==================================================================================
+ 
+ OutSimple
+====================================================================================*/
+OutSimple(loc,std:LVTTL) input:(IN) {
+    iobOut IOB loc:!loc! cfg:{O1INV:O1 DRIVEATTRBOX:8 IOATTRBOX:!std! SLEW:SLOW  OMUX:O1} ;
+    wire my IN to iobOut's O1;
+}
+
+
+
+//====================================================================================
+// LED
+//====================================================================================
+top() {
+  led OutSimple loc:K12;
+  switch InSimple loc:F12;
+// led Led0;
+// switch Switch0;
+
+ wire switch's OUT to led's IN;
+}
+ 

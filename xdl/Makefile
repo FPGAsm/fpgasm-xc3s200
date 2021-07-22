@@ -10,12 +10,12 @@ default: test.bit
 test.ncd: test.xdl
 	xdl >xdl.log -xdl2ncd test
 #adjust as you see fit - I put it here to look at later
-	cp test.ncd ~/Desktop/FPGASM/STUDY/test.ncd
+#	cp test.ncd ~/Desktop/FPGASM/STUDY/test.ncd
 
 testrt.ncd: test.ncd
 	par -p  -w test.ncd testrt.ncd #//-nopad 
 #adjust as you see fit - I put it here to look at later
-	cp testrt.ncd ~/Desktop/FPGASM/STUDY/testrt.ncd
+#	cp testrt.ncd ~/Desktop/FPGASM/STUDY/testrt.ncd
 
 test.bit: testrt.ncd
 	bitgen  -intstyle silent -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:6 \
