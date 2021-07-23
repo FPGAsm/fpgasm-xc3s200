@@ -1,4 +1,4 @@
-#FPGASM TEST
+# FPGASM TEST
 
 This repo contains a number of simple FPGAsm projects, targeting Digilent Spartan-3 Starter board (XC3S200).  Other chips and boards will require adjustments to the placement and low-level modules (TODO).
 
@@ -6,7 +6,7 @@ This repo contains a number of simple FPGAsm projects, targeting Digilent Sparta
 
 * Digilent Spartan-3 Starter Board (XC3S200)
 * Xilinx ISE 14.7 (ideally; earlier versions may work)
-* FPGAsm 
+* FPGAsm
 
 Please make sure everything works with ISE - try to build a simple project and load it to the board.  Do not try fpgasm until everything works in ISE.
 
@@ -23,7 +23,7 @@ If there are no errors, you can configure the fpga board by entering
   ./build test00 burn
 ```
 
-To quickly check for fpgasm syntax errors, 
+To quickly check for fpgasm syntax errors,
 
 ```
 fpgasm <filename>.fa crap.xdl
