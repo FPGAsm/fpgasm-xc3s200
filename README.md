@@ -1,6 +1,14 @@
 # FPGASM TEST
 
-This repo contains a number of simple FPGAsm projects, targeting Digilent Spartan-3 Starter board (XC3S200).  Other chips and boards will require adjustments to the placement and low-level modules (TODO).
+WORK IN PROGRESS!!!    Clumsy and embarrassing repo!
+
+2021 breaking change in fpgasm:
+
+Instead of `#include ...xdlrc` at the source level, fpgasm now requires the .xdlrc file to be renamed literally to `device.xdlrc` and placed (or linked) in the invocation directory.  The examples here are not yet updated, and will not work in directories that do not have a `device.xdlrc` file.
+
+## What is this?
+
+This repo contains a number of simple FPGAsm test projects, targeting Digilent Spartan-3 Starter board (XC3S200).  Other chips and boards will require adjustments to the placement and low-level modules 
 
 ## PRE-REQUISITES
 
